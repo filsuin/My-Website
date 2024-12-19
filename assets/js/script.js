@@ -73,10 +73,20 @@ document.addEventListener("DOMContentLoaded", () => {
                         imageURL = canvas.toDataURL("image/png");
                 }
 
+                // Vérification de l'URL de l'image
+                if (!imageURL) {
+                    alert("La conversion de l'image a échoué.");
+                    return;
+                }
+
                 // Créer le lien de téléchargement
                 downloadLink.href = imageURL;
                 downloadLink.style.display = "inline-block";
                 downloadLink.download = `image_convertie.${format}`;
+            };
+
+            img.onerror = function () {
+                alert("Une erreur est survenue lors du chargement de l'image.");
             };
         };
 
