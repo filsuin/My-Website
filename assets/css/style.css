@@ -1,91 +1,120 @@
-/* Styles généraux */
+/* Styles généraux pour les deux pages */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-/* Wrapper pour centrer le contenu verticalement et horizontalement */
-.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
+    height: 100vh;
 }
 
-/* Conteneur principal */
 .container {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
     max-width: 600px;
-    width: 90%; /* Responsive */
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
 
-/* Header */
-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
+/* Style spécifique pour le titre */
+h1 {
+    font-size: 24px;
     margin-bottom: 20px;
-    color: #555;
 }
 
-/* Navigation */
-nav {
-    margin-top: 20px;
+/* Formulaire (pour les deux pages) */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-nav .button {
-    display: inline-block;
-    margin: 10px 5px;
-    padding: 10px 20px;
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="file"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
     font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-    background-color: #4caf50;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 100%;
 }
 
-nav .button:hover {
+button:hover {
     background-color: #45a049;
 }
 
-/* Footer */
-footer {
-    width: 100%;
-    text-align: center;
-    background: #333;
-    color: white;
-    padding: 10px 0;
+.messages {
+    margin-top: 15px;
+    color: red;
     font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
+}
+
+/* Page du générateur de QR Code (qr_code.html) */
+#qrcode {
+    margin-top: 20px;
+}
+
+#downloadLink {
+    margin-top: 20px;
+    display: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#downloadLink:hover {
+    background-color: #45a049;
+}
+
+/* Page de conversion d'image (image_converter.html) */
+#previewContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#previewContainer img {
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+#message {
+    margin-top: 20px;
 }
 
 /* Responsive pour petits écrans */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;
+    h1 {
+        font-size: 20px;
     }
 
-    header p {
-        font-size: 1em;
+    .form-group {
+        margin-bottom: 10px;
     }
 
-    nav .button {
-        padding: 8px 15px;
+    button {
         font-size: 14px;
     }
 }
