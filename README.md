@@ -49,8 +49,3 @@ Si vous souhaitez contribuer à ce projet, vous pouvez :
 2. Créer une branche pour votre fonctionnalité ou correction de bug.
 3. Soumettre une pull request.
 
-## Licence
-
-Ce projet est sous licence MIT. Vous pouvez l'utiliser, le modifier et le redistribuer à votre guise, à condition de maintenir l'attribution et de ne pas utiliser ce projet à des fins commerciales.
-
-© 2024 - Tous droits réservés.
