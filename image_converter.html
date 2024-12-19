@@ -10,10 +10,10 @@
 <body>
     <div class="container">
         <h1>Convertisseur d'Images</h1>
-        <form id="imageForm">
+        <form id="convertForm">
             <div class="form-group">
                 <label for="file">Télécharger une image :</label>
-                <input type="file" id="file" name="file" accept="image/*" required>
+                <input type="file" id="file" name="file" required accept="image/*">
             </div>
             <div class="form-group">
                 <label for="format">Format de sortie :</label>
@@ -28,7 +28,7 @@
             <button type="submit">Convertir</button>
         </form>
         <div id="previewContainer"></div>
-        <div id="message"></div>
+        <a id="downloadLink" href="#" download style="display:none;">Télécharger l'image convertie</a>
     </div>
 </body>
 </html>
