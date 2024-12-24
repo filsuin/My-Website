@@ -58,6 +58,10 @@ function sendWishlist() {
     letter.textContent = '📜';
     document.body.appendChild(letter);
 
+    // Jouer le son du Père Noël qui rit
+    const santaLaugh = document.getElementById('santaLaugh');
+    santaLaugh.play();
+
     setTimeout(() => {
         letter.remove();
         alert('Votre liste a été envoyée au Père Noël !');
