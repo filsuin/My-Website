@@ -1,6 +1,6 @@
 /* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Assure que le contenu est centré verticalement */
+    min-height: 100vh; /* Assure que le contenu est centré verticalement */
 }
 
 /* Wrapper pour centrer le contenu dans toutes les pages */
@@ -45,12 +45,8 @@ header p {
     color: #555;
 }
 
-/* Navigation */
-nav {
-    margin-top: 20px;
-}
-
-nav .button {
+/* Boutons */
+.button {
     display: inline-block;
     margin: 10px 5px;
     padding: 10px 20px;
@@ -62,57 +58,8 @@ nav .button {
     transition: background-color 0.3s ease;
 }
 
-nav .button:hover {
+.button:hover {
     background-color: #45a049;
-}
-
-/* Formulaires - Convertisseur d'images */
-form {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-form input[type="file"],
-form select,
-form button {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-form button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-form button:hover {
-    background-color: #45a049;
-}
-
-/* Prévisualisation d'image */
-#previewContainer img {
-    max-width: 100%;
-    margin-top: 15px;
 }
 
 /* Footer */
@@ -139,17 +86,8 @@ footer {
         font-size: 1em;
     }
 
-    nav .button {
+    .button {
         padding: 8px 15px;
         font-size: 14px;
-    }
-
-    form button {
-        padding: 10px 15px;
-    }
-
-    form input[type="file"],
-    form select {
-        padding: 8px;
     }
 }
