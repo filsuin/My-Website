@@ -1,8 +1,6 @@
 # My-Website
 Un site web regroupant tous les outils que je code moi-même, avec un générateur de QR Code comme première réalisation. Ce projet est voué à être enrichi et amélioré jour après jour pour intégrer toujours plus de fonctionnalités !
 
-
-
 ## Prérequis
 
 - Un navigateur web moderne (Chrome, Firefox, Edge, Safari).
@@ -12,13 +10,13 @@ Un site web regroupant tous les outils que je code moi-même, avec un générate
 
 1. Clonez ou téléchargez le projet.
 2. Ouvrez le fichier `index.html` dans votre navigateur pour accéder à la page d'accueil.
-3. Naviguez vers la page `qr_code.html` pour commencer à générer des QR Codes.
+3. Naviguez vers les différentes pages pour utiliser les outils disponibles.
 
 ## Fonctionnalités
 
 ### Page d'accueil (`index.html`)
 
-- Présente les projets et propose un lien vers le générateur de QR Code.
+- Présente les projets et propose des liens vers les différents outils.
 - Permet d'accéder à mon [GitHub](https://github.com/filsuin) pour découvrir d'autres projets.
 
 ### Générateur de QR Code (`qr_code.html`)
@@ -29,23 +27,46 @@ Cette page vous permet de générer un QR Code à partir d'une URL.
 
 1. **Entrez une URL** dans le champ prévu à cet effet.
 2. **Sélectionnez la couleur** du QR Code en cliquant sur le sélecteur de couleur.
-3. **Définissez la taille** du QR Code à l'aide du curseur (de 1 à 40, la taille sera multipliée par 10 pour un meilleur rendu).
-4. Cliquez sur **Générer QR Code**.
-5. Un QR Code sera généré et affiché. Vous pouvez le télécharger en cliquant sur le lien **Télécharger QR Code** qui apparaîtra une fois le QR Code généré.
+3. **Choisissez la taille** du QR Code en ajustant le champ de taille.
+4. **Cliquez sur "Générer QR Code"** pour créer le QR Code.
+5. **Téléchargez le QR Code** en cliquant sur le bouton de téléchargement.
 
-### Fichier CSS (`style.css`)
+### Convertisseur d'Images (`image.html`)
 
-Ce fichier contient les styles pour rendre l'interface utilisateur plus agréable et responsive. Il ajuste la mise en page pour différents types d'écrans, offrant une expérience optimisée sur les appareils mobiles et les ordinateurs de bureau.
+Cette page vous permet de convertir des images en différents formats et de redimensionner les images.
 
-### Fichier JavaScript (`script.js`)
+#### Instructions :
 
-Ce script est responsable de la logique du générateur de QR Code. Lorsqu'un utilisateur clique sur le bouton "Générer QR Code", il valide les entrées, génère le QR Code et offre un lien pour télécharger l'image du QR Code.
+1. **Téléchargez une image** en cliquant sur le bouton de téléchargement.
+2. **Sélectionnez le format de sortie** (JPEG, PNG, BMP, GIF, TIFF, ICO, WEBP).
+3. **Ajustez la qualité** de l'image (1-100).
+4. **Redimensionnez l'image** en spécifiant la largeur et/ou la hauteur.
+5. **Cliquez sur "Convertir"** pour convertir l'image.
+6. **Téléchargez l'image convertie** en cliquant sur le bouton de téléchargement.
 
-## Contribution
+### Générateur de Mots de Passe (`password_generator.html`)
 
-Si vous souhaitez contribuer à ce projet, vous pouvez :
+Cette page vous permet de générer des mots de passe aléatoires en fonction des exigences de l'utilisateur.
 
-1. Forker le projet.
-2. Créer une branche pour votre fonctionnalité ou correction de bug.
-3. Soumettre une pull request.
+#### Instructions :
 
+1. **Spécifiez la longueur** du mot de passe.
+2. **Sélectionnez les types de caractères** à inclure (minuscules, majuscules, chiffres, caractères spéciaux).
+3. **Cliquez sur "Générer"** pour créer le mot de passe.
+4. **Copiez le mot de passe généré** affiché dans le conteneur de résultats.
+
+### Téléchargeur de Vidéos YouTube (`youtube_downloader.html`)
+
+Cette page vous permet de télécharger des vidéos YouTube en MP3 ou en MP4.
+
+#### Instructions :
+
+1. **Entrez le lien de la vidéo YouTube** dans le champ prévu à cet effet.
+2. **Sélectionnez le format de sortie** (MP3 ou MP4).
+3. **Choisissez la qualité** de téléchargement (Haute, Moyenne, Basse).
+4. **Cliquez sur "Télécharger"** pour obtenir le lien de téléchargement.
+5. **Téléchargez la vidéo** en cliquant sur le lien de téléchargement généré.
+
+## Contribuer
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
