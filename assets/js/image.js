@@ -3,11 +3,18 @@ document.getElementById('convertForm').addEventListener('submit', function(event
 
     const fileInput = document.getElementById('file');
     const formatSelect = document.getElementById('format');
+    const qualityInput = document.getElementById('quality');
+    const widthInput = document.getElementById('width');
+    const heightInput = document.getElementById('height');
     const previewContainer = document.getElementById('previewContainer');
+    const sizeEstimate = document.getElementById('sizeEstimate');
     const downloadLink = document.getElementById('downloadLink');
 
     const file = fileInput.files[0];
     const format = formatSelect.value;
+    const quality = qualityInput.value / 100;
+    const width = widthInput.value;
+    const height = heightInput.value;
 
     if (!file) {
         alert('Veuillez télécharger une image.');
@@ -20,9 +27,23 @@ document.getElementById('convertForm').addEventListener('submit', function(event
         img.onload = function() {
             const canvas = document.createElement('canvas');
             const ctx = canvas.getContext('2d');
-            canvas.width = img.width;
-            canvas.height = img.height;
-            ctx.drawImage(img, 0, 0);
+
+            let newWidth = img.width;
+            let newHeight = img.height;
+
+            if (width) {
+                newWidth = width;
+                newHeight = (img.height / img.width) * width;
+            }
+
+            if (height) {
+                newHeight = height;
+                newWidth = (img.width / img.height) * height;
+            }
+
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+            ctx.drawImage(img, 0, 0, newWidth, newHeight);
 
             let mimeType;
             switch (format) {
@@ -62,7 +83,11 @@ document.getElementById('convertForm').addEventListener('submit', function(event
                 imgPreview.src = url;
                 imgPreview.alt = 'Image convertie';
                 previewContainer.appendChild(imgPreview);
-            }, mimeType);
+
+                // Estimation de la taille de l'image
+                const estimatedSize = (blob.size / 1024).toFixed(2); // Taille en Ko
+                sizeEstimate.textContent = `Estimation de la taille de l'image : ${estimatedSize} Ko`;
+            }, mimeType, quality);
         };
         img.src = event.target.result;
     };

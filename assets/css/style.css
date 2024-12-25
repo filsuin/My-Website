@@ -46,7 +46,7 @@ header p {
 }
 
 /* Boutons */
-.button {
+.button, input[type="file"], input[type="submit"], button {
     display: inline-block;
     margin: 10px 5px;
     padding: 10px 20px;
@@ -54,11 +54,13 @@ header p {
     color: #fff;
     text-decoration: none;
     background-color: #4caf50;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
+.button:hover, input[type="file"]:hover, input[type="submit"]:hover, button:hover {
     background-color: #45a049;
 }
 
@@ -91,7 +93,7 @@ footer {
         font-size: 1em;
     }
 
-    .button {
+    .button, input[type="file"], input[type="submit"], button {
         padding: 8px 15px;
         font-size: 14px;
     }
