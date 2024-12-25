@@ -76,6 +76,11 @@ footer {
     z-index: 1000;
 }
 
+/* Lien pour retourner à l'accueil */
+.wrapper .button {
+    margin-top: 20px;
+}
+
 /* Responsive pour petits écrans */
 @media (max-width: 768px) {
     header h1 {

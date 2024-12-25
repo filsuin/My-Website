@@ -5,107 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <!-- Inclusion directe du fichier CSS -->
-    <style>
-        /* Styles généraux */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-
-        /* Wrapper pour centrer le contenu verticalement et horizontalement */
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        /* Conteneur principal */
-        .container {
-            max-width: 600px;
-            width: 90%; /* Responsive */
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        /* Header */
-        header h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        /* Navigation */
-        nav {
-            margin-top: 20px;
-        }
-
-        nav .button {
-            display: inline-block;
-            margin: 10px 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            text-decoration: none;
-            background-color: #4caf50;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav .button:hover {
-            background-color: #45a049;
-        }
-
-        /* Footer */
-        footer {
-            width: 100%;
-            text-align: center;
-            background: #333;
-            color: white;
-            padding: 10px 0;
-            font-size: 14px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        /* Responsive pour petits écrans */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-
-            nav .button {
-                padding: 8px 15px;
-                font-size: 14px;
-            }
-        }
-
-        /* Centrer le conteneur du QR code */
-        .qrcode-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/CSS/style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/Images/favicon.ico">
 </head>
@@ -131,6 +31,8 @@
             <!-- Bouton pour télécharger le QR Code -->
             <a id="downloadLink" href="#" download="qrcode.png" class="button" style="display: none;">Télécharger QR Code</a>
         </div>
+        <!-- Lien pour retourner à l'accueil -->
+        <a href="index.html" class="button">Retour à l'accueil</a>
     </div>
 
     <!-- QRCode.js depuis un CDN -->
