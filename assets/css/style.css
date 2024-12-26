@@ -64,6 +64,19 @@ header p {
     background-color: #45a049;
 }
 
+#copyButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #4caf50;
+    margin-top: 10px;
+}
+
+#copyButton:hover {
+    color: #45a049;
+}
+
 /* Footer */
 footer {
     width: 100%;

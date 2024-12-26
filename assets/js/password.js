@@ -29,5 +29,18 @@ document.getElementById('passwordForm').addEventListener('submit', function(even
         password += allChars[randomIndex];
     }
 
-    document.getElementById('passwordResult').textContent = password;
+    const passwordResult = document.getElementById('passwordResult');
+    passwordResult.textContent = password;
+
+    const copyButton = document.getElementById('copyButton');
+    copyButton.style.display = 'inline-block';
+});
+
+document.getElementById('copyButton').addEventListener('click', function() {
+    const passwordResult = document.getElementById('passwordResult').textContent;
+    navigator.clipboard.writeText(passwordResult).then(function() {
+        alert('Mot de passe copié dans le presse-papiers!');
+    }, function(err) {
+        alert('Erreur lors de la copie du mot de passe: ', err);
+    });
 });
