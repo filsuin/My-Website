@@ -55,10 +55,6 @@ Cette page vous permet de générer des mots de passe aléatoires en fonction de
 3. **Cliquez sur "Générer"** pour créer le mot de passe.
 4. **Copiez le mot de passe généré** affiché dans le conteneur de résultats.
 
-### Téléchargeur de Vidéos YouTube (`youtube_downloader.html`)
-
-Cette page vous permet de télécharger des vidéos YouTube en MP3 ou en MP4.
-
 #### Instructions :
 
 1. **Entrez le lien de la vidéo YouTube** dans le champ prévu à cet effet.
